@@ -23,6 +23,7 @@
 /* Estilo do corpo da página */
 body {
   background: var(--bg-url) no-repeat top center/cover; /* Fundo da página */
+  height: 100vh;
 }
 
 /* Estilo para todos os elementos dentro do corpo */
@@ -33,7 +34,8 @@ body * {
 
 /* Estilo do contêiner principal */
 #container {
-  width: 360px; /* Largura do contêiner */
+  width: 100%; /* Largura do contêiner */
+  max-width: 588px;
   margin: 56px auto 0; /* Margens do contêiner */
   padding: 0 24px; /* Padding interno do contêiner */
 }
@@ -147,4 +149,15 @@ footer {
   padding: 24px 0; /* Padding vertical do rodapé */
   text-align: center; /* Centraliza o texto do rodapé */
   font-size: 14px; /* Tamanho da fonte do rodapé */
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-mobile.jpg);
+  }
+
+  .light {
+    --bg-url: url(./Assets/bg-desktop-light.jpg);
+  }
 }
