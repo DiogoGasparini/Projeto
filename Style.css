@@ -1,158 +1,150 @@
+/* Definições de variáveis globais */
 :root {
-  --text-color: white;
-  --bg-url: url(./Assets/bg-desktop.jpg);
-  --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(255,255,255,0.2);
-  --switch-bg-url: url(./Assets/moon-stars.svg)
+  --text-color: white; /* Cor do texto padrão */
+  --bg-url: url(./Assets/bg-desktop.jpg); /* URL da imagem de fundo padrão */
+  --stroke-color: rgba(255, 255, 255, 0.5); /* Cor da borda padrão */
+  --surface-color: rgba(255, 255, 255, 0.05); /* Cor de superfície padrão */
+  --surface-color-hover: rgba(0, 0, 0, 0.02); /* Cor de superfície ao passar o mouse */
+  --highlight-color: rgba(255, 255, 255, 0.2); /* Cor de destaque */
+  --switch-bg-url: url(./Assets/moon-stars.svg); /* URL do fundo do switch padrão */
 }
 
+/* Estilos para o tema claro */
 .light {
-  --text-color: black;
-  --bg-url: url(./Assets/bg-desktop-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0,0,0,0.05);
-  --surface-color-hover: rgba(0, 0, 0,0.02);
-  --highlight-color: rgba(0,0,0,0.1);
-  --switch-bg-url: url(./Assets/sun.svg)
+  --text-color: black; /* Cor do texto no tema claro */
+  --bg-url: url(./Assets/bg-desktop-light.jpg); /* URL da imagem de fundo no tema claro */
+  --stroke-color: rgba(0, 0, 0, 0.5); /* Cor da borda no tema claro */
+  --surface-color: rgba(0, 0, 0, 0.05); /* Cor de superfície no tema claro */
+  --surface-color-hover: rgba(0, 0, 0, 0.02); /* Cor de superfície ao passar o mouse no tema claro */
+  --highlight-color: rgba(0, 0, 0, 0.1); /* Cor de destaque no tema claro */
+  --switch-bg-url: url(./Assets/sun.svg); /* URL do fundo do switch no tema claro */
 }
 
+/* Estilo do corpo da página */
 body {
-background: var(--bg-url) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover; /* Fundo da página */
 }
 
+/* Estilo para todos os elementos dentro do corpo */
 body * {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-color);
+  font-family: 'Inter', sans-serif; /* Fonte padrão */
+  color: var(--text-color); /* Cor do texto */
 }
+
+/* Estilo do contêiner principal */
 #container {
-  width: 360px;
-  margin: 56px auto 0px;
-  padding: 0 24px;
+  width: 360px; /* Largura do contêiner */
+  margin: 56px auto 0; /* Margens do contêiner */
+  padding: 0 24px; /* Padding interno do contêiner */
 }
 
-/* profile */
-
+/* Estilo do perfil */
 #profile {
-  text-align: center;
+  text-align: center; /* Centraliza o texto do perfil */
 }
 
 #profile img {
-  width: 112px;
+  width: 112px; /* Largura da imagem do perfil */
 }
 
 #profile p {
-  font-weight: 500;
-  line-height: 24px; 
-  margin-top: 8px;
+  font-weight: 500; /* Peso da fonte do parágrafo */
+  line-height: 24px; /* Altura da linha do parágrafo */
+  margin-top: 8px; /* Margem superior do parágrafo */
 }
 
-/* switch */
-
+/* Estilo do switch de tema */
 #switch {
-  position: relative;
-  width: 64px;
-
-  margin: 4px auto;
+  position: relative; /* Posição relativa para o switch */
+  width: 64px; /* Largura do switch */
+  margin: 4px auto; /* Margens do switch */
 }
 
 #switch button {
-  width: 32px;
-  height: 32px;
-  background: white var(--switch-bg-url) no-repeat center;
-  border: 0;
-  border-radius: 50%;
-
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  transform: translateY(-50%);
-  }
+  width: 32px; /* Largura do botão do switch */
+  height: 32px; /* Altura do botão do switch */
+  background: white var(--switch-bg-url) no-repeat center; /* Fundo do botão */
+  border: 0; /* Sem borda */
+  border-radius: 50%; /* Bordas arredondadas */
+  position: absolute; /* Posição absoluta para o botão */
+  top: 50%; /* Alinhamento vertical */
+  left: 0; /* Alinhamento horizontal */
+  z-index: 1; /* Camada do botão */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+}
 
   .light #switch button {
-    right: 0;
-    left: initial;
-  }
+  right: 0; /* Alinhamento do botão no tema claro */
+  left: initial; /* Remove o alinhamento inicial */
+}
 
 #switch span {
-  display: block;
-  width: 64px;
-  height: 24px;
-  background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 9999px;
+  display: block; /* Exibe como bloco */
+  width: 64px; /* Largura do span do switch */
+  height: 24px; /* Altura do span do switch */
+  background: var(--surface-color); /* Cor de fundo do span */
+  border: 1px solid var(--stroke-color); /* Borda do span */
+  backdrop-filter: blur(4px); /* Efeito de desfoque no fundo */
+  -webkit-backdrop-filter: blur(4px); /* Efeito de desfoque para navegadores WebKit */
+  border-radius: 9999px; /* Bordas arredondadas */
 }
 
 
-/* links */
-
+/* * Estilo da lista de links */
 ul {
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  padding: 24px 0;
+  list-style: none; /* Remove marcadores da lista */
+  display: flex; /* Exibe a lista como flexível */
+  flex-direction: column; /* Direção da lista em coluna */
+  gap: 16px; /* Espaçamento entre os itens da lista */
+  padding: 24px 0; /* Padding vertical da lista */
 }
 
-ul li a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 16px 24px;
-
-  background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
-  border-radius: 8px;
-
-  backdrop-filter: blur(4px);
-
-  text-decoration: none;
-  font-weight: 500;
-
-  transition: background 0.5s;
+ul li a {
+  display: flex; /* Exibe os links como flexíveis */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  padding: 16px 24px; /* Padding interno dos links */
+  background: var(--surface-color); /* Cor de fundo dos links */
+  border: 1px solid var(--stroke-color); /* Borda dos links */
+  border-radius: 8px; /* Bordas arredondadas dos links */
+  backdrop-filter: blur(4px); /* Efeito de desfoque no fundo dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-weight: 500; /* Peso da fonte dos links */
+  transition: background 0.5s; /* Transição suave para a cor de fundo */
 }
 
-/* pseudo-selector */
-
+/* Efeito ao passar o mouse sobre os links */
 ul li a:hover {
-  background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);  
+  background: var(--surface-color-hover); /* Cor de fundo ao passar o mouse */
+  border: 1.5px solid var(--text-color); /* Borda ao passar o mouse */
 }
 
-/* social links */
+
+/* Estilo dos links sociais */
 #social-links {
-  display: flex;
-  justify-content: center;
-
-  padding: 24px 0;
-
-  font-size: 24px;
+  display: flex; /* Exibe os links sociais como flexíveis */
+  justify-content: center; /* Centraliza os links sociais */
+  padding: 24px 0; /* Padding vertical dos links sociais */
+  font-size: 24px; /* Tamanho da fonte dos links sociais */
 }
 
 #social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-
-  transition: background 0.2s;
-  border-radius: 50%; 
-
+  display: flex; /* Exibe os links sociais como flexíveis */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 16px; /* Padding interno dos links sociais */
+  transition: background 0.2s; /* Transição suave para a cor de fundo */
+  border-radius: 50%; /* Bordas arredondadas dos links sociais */
 }
 
+/* Efeito ao passar o mouse sobre os links sociais */
 #social-links a:hover {
-  background: var(--highlight-color);
+  background: var(--highlight-color); /* Cor de fundo ao passar o mouse */
 }
 
+/* Estilo do rodapé */
 footer {
-  padding: 24px 0;
-  text-align: center;
-  font-size: 14px;
+  padding: 24px 0; /* Padding vertical do rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+  font-size: 14px; /* Tamanho da fonte do rodapé */
 }
